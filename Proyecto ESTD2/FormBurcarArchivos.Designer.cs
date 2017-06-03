@@ -146,6 +146,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnBuscarArchivo);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "FormBurcarArchivos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar un Archivo";

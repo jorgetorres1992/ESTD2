@@ -59,6 +59,9 @@ namespace Proyecto_ESTD2
         {
             mycomputer.FileSystem.CopyFile(txtOrigen.Text, txtDestino.Text);
             MessageBox.Show("Archivo ha sido Agregado Correctamente!!");
+            txtOrigen.Clear();
+            txtDestino.Clear();
+
         }
     }
 }

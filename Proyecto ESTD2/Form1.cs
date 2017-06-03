@@ -47,7 +47,7 @@ namespace Proyecto_ESTD2
         private void Form1_Load(object sender, EventArgs e) // funcion que carga todo el formulario al darle start
         {
             
-
+           
         }
 
         private void button1_Click(object sender, EventArgs e) // Boton Buscar
@@ -95,6 +95,24 @@ namespace Proyecto_ESTD2
             FormBurcarArchivos frm = new FormBurcarArchivos();
             frm.Show();
            
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            FormAgregarCarpeta frm = new FormAgregarCarpeta();
+            frm.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            FormExtraer extraer = new FormExtraer();
+            extraer.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            FormEliminar eliminar = new FormEliminar();
+            eliminar.Show();
         }
     }
 }
