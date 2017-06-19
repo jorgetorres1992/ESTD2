@@ -26,7 +26,7 @@ namespace Proyecto_ESTD2
             this.Hide();
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void radioButton1_CheckedChanged(object sender, EventArgs e) //agregando a la lista las carpetas y archivos del HDD
         {
             if (radioButton1.Checked == true)
             {
@@ -43,7 +43,8 @@ namespace Proyecto_ESTD2
                
 
                 listaArchivos.Items.Clear();
-                
+                //textBox2.Text = "Ruta";
+
             }
             else
             {
@@ -57,14 +58,51 @@ namespace Proyecto_ESTD2
         
                 }
                 
-                listaCarpeta.Items.Clear();                
+                listaCarpeta.Items.Clear();
+                //textBox1.Text = "Ruta";              
             }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-           
 
+            if (radioButton1.Checked == true)
+            {
+                string ruta1 = textBox1.Text;
+                Directory.Delete(ruta1);
+                MessageBox.Show("Carpeta Eliminada Correctamente!!");
+            }
+            else
+            {
+                string ruta2 = textBox2.Text;
+                File.Delete(ruta2);
+                MessageBox.Show("Archivo Eliminado Correctamente!!");
+
+            }
+        }
+
+        private void listaCarpeta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked == true)
+            {
+                textBox1.Text = listaCarpeta.SelectedItem.ToString();
+            }
+            else
+            {
+                textBox1.Text = "RUTA";
+            }
+        }
+
+        private void listaArchivos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (radioButton2.Checked == true)
+            {
+                textBox2.Text = listaArchivos.SelectedItem.ToString();
+            }
+            else
+            {
+                textBox2.Text = "RUTA";
+            }
         }
     }
 }

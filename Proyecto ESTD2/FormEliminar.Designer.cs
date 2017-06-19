@@ -30,14 +30,15 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.listaCarpeta = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.listaArchivos = new System.Windows.Forms.ListBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.listaCarpeta = new System.Windows.Forms.ListBox();
-            this.listaArchivos = new System.Windows.Forms.ListBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -63,6 +64,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Seleccione la Carpera a Eliminar";
             // 
+            // listaCarpeta
+            // 
+            this.listaCarpeta.FormattingEnabled = true;
+            this.listaCarpeta.ItemHeight = 15;
+            this.listaCarpeta.Location = new System.Drawing.Point(6, 22);
+            this.listaCarpeta.Name = "listaCarpeta";
+            this.listaCarpeta.Size = new System.Drawing.Size(281, 289);
+            this.listaCarpeta.TabIndex = 1;
+            this.listaCarpeta.SelectedIndexChanged += new System.EventHandler(this.listaCarpeta_SelectedIndexChanged);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.listaArchivos);
@@ -73,6 +84,16 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Selecione el Archivo a Eliminar";
+            // 
+            // listaArchivos
+            // 
+            this.listaArchivos.FormattingEnabled = true;
+            this.listaArchivos.ItemHeight = 15;
+            this.listaArchivos.Location = new System.Drawing.Point(6, 22);
+            this.listaArchivos.Name = "listaArchivos";
+            this.listaArchivos.Size = new System.Drawing.Size(281, 289);
+            this.listaArchivos.TabIndex = 1;
+            this.listaArchivos.SelectedIndexChanged += new System.EventHandler(this.listaArchivos_SelectedIndexChanged);
             // 
             // radioButton1
             // 
@@ -97,24 +118,6 @@
             this.radioButton2.Text = "Archivos del HDD";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // listaCarpeta
-            // 
-            this.listaCarpeta.FormattingEnabled = true;
-            this.listaCarpeta.ItemHeight = 15;
-            this.listaCarpeta.Location = new System.Drawing.Point(6, 22);
-            this.listaCarpeta.Name = "listaCarpeta";
-            this.listaCarpeta.Size = new System.Drawing.Size(281, 289);
-            this.listaCarpeta.TabIndex = 1;
-            // 
-            // listaArchivos
-            // 
-            this.listaArchivos.FormattingEnabled = true;
-            this.listaArchivos.ItemHeight = 15;
-            this.listaArchivos.Location = new System.Drawing.Point(6, 22);
-            this.listaArchivos.Name = "listaArchivos";
-            this.listaArchivos.Size = new System.Drawing.Size(281, 289);
-            this.listaArchivos.TabIndex = 1;
-            // 
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(328, 188);
@@ -137,16 +140,26 @@
             // 
             // textBox1
             // 
+            this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(35, 409);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(287, 20);
+            this.textBox1.Size = new System.Drawing.Size(281, 20);
             this.textBox1.TabIndex = 5;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Enabled = false;
+            this.textBox2.Location = new System.Drawing.Point(421, 409);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(281, 20);
+            this.textBox2.TabIndex = 6;
             // 
             // FormEliminar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(741, 465);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.radioButton2);
@@ -178,5 +191,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
