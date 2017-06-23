@@ -50,13 +50,15 @@ namespace Proyecto_ESTD2
            
         }
 
-        private void button1_Click(object sender, EventArgs e) // Boton Buscar
+        private void button1_Click(object sender, EventArgs e) // Boton CREAR
         {
             FolderBrowserDialog carpeta = new FolderBrowserDialog();
             if (carpeta.ShowDialog() == System.Windows.Forms.DialogResult.OK) 
             {
                 textBox1.Text = carpeta.SelectedPath;
             }
+            // ********************* CREACION DE ARCHIVO INDEX
+            BinaryWriter binaryWriter = new BinaryWriter(File.Open("C:\\Users\\JLT\\Desktop\\Proyecto ESTD2 V3\\HDD\\HDD.index", FileMode.Create));
         }
 
         private void button2_Click(object sender, EventArgs e) // boton Montar
@@ -88,6 +90,7 @@ namespace Proyecto_ESTD2
 
             tvFile.Nodes.Clear();
             MessageBox.Show("Disco ha sido Desmontado Exitosamente");
+           
         }
 
         private void button4_Click(object sender, EventArgs e)// btn agregar archivos
@@ -113,6 +116,32 @@ namespace Proyecto_ESTD2
         {
             FormEliminar eliminar = new FormEliminar();
             eliminar.Show();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUtilizado_TextChanged(object sender, EventArgs e)
+        {
+            //string rutaUtilizado = DirectoryInfo("Z\\");
+        }
+
+        private void tvFile_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            FormBuscar buscar = new FormBuscar();
+            buscar.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
