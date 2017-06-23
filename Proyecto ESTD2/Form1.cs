@@ -143,5 +143,24 @@ namespace Proyecto_ESTD2
         {
             this.Close();
         }
-    }
+
+        private void btnIndex_Click(object sender, EventArgs e)
+        {
+            Index names = new Index();
+            string ruta = @"Z:\\";
+            DirectoryInfo dir = new DirectoryInfo(ruta);
+
+           foreach(var file in dir.GetFiles())
+            {
+                MessageBox.Show(file.Name);
+            }
+           
+            /*for (int i = 0; i < Index.size; i++)
+            {
+                
+            }*/
+
+       
+        }
+        }
 }

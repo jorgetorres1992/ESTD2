@@ -39,6 +39,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -46,7 +47,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
+            this.btnIndex = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -148,6 +149,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnIndex);
             this.groupBox1.Controls.Add(this.button9);
             this.groupBox1.Controls.Add(this.button8);
             this.groupBox1.Controls.Add(this.button7);
@@ -157,10 +159,20 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(411, 209);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(291, 279);
+            this.groupBox1.Size = new System.Drawing.Size(291, 348);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Acciones para el Directorio";
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(114, 272);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(96, 44);
+            this.button9.TabIndex = 5;
+            this.button9.Text = "Salir";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button8
             // 
@@ -232,15 +244,16 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Jorge Luis Torres 61211143";
             // 
-            // button9
+            // btnIndex
             // 
-            this.button9.Location = new System.Drawing.Point(170, 194);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(96, 44);
-            this.button9.TabIndex = 5;
-            this.button9.Text = "Salir";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.btnIndex.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIndex.Location = new System.Drawing.Point(169, 194);
+            this.btnIndex.Name = "btnIndex";
+            this.btnIndex.Size = new System.Drawing.Size(97, 44);
+            this.btnIndex.TabIndex = 6;
+            this.btnIndex.Text = "Index Nombres HDD";
+            this.btnIndex.UseVisualStyleBackColor = true;
+            this.btnIndex.Click += new System.EventHandler(this.btnIndex_Click);
             // 
             // Form1
             // 
@@ -292,6 +305,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btnIndex;
     }
 }
 
